@@ -3,13 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C0229C8266625830054E6EE /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 0C0229C7266625830054E6EE /* Realm */; };
+		0C0229CA266625830054E6EE /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0C0229C9266625830054E6EE /* RealmSwift */; };
+		0C0229CC266627790054E6EE /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0229CB266627790054E6EE /* Account.swift */; };
+		0C0229CE26662AF60054E6EE /* AccountListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0229CD26662AF60054E6EE /* AccountListTableViewCell.swift */; };
+		0C0229D2266760BB0054E6EE /* AccountListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0229D1266760BB0054E6EE /* AccountListViewController.swift */; };
+		0C0229D8266772EA0054E6EE /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0229D7266772EA0054E6EE /* EditViewController.swift */; };
+		0C0229DA26677B730054E6EE /* MoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0229D926677B730054E6EE /* MoneyViewController.swift */; };
+		0C49B29D265F684C00F40680 /* Eureka in Frameworks */ = {isa = PBXBuildFile; productRef = 0C49B29C265F684C00F40680 /* Eureka */; };
+		0C49B2A32666071300F40680 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C49B2A22666071300F40680 /* AddViewController.swift */; };
+		0C67C56F266C4D6800A7A146 /* MoneyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C67C56E266C4D6800A7A146 /* MoneyTableViewCell.swift */; };
 		0C8C43E02659FB4500A48394 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8C43DF2659FB4500A48394 /* AppDelegate.swift */; };
 		0C8C43E22659FB4500A48394 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8C43E12659FB4500A48394 /* SceneDelegate.swift */; };
-		0C8C43E42659FB4500A48394 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8C43E32659FB4500A48394 /* ViewController.swift */; };
 		0C8C43E72659FB4500A48394 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C8C43E52659FB4500A48394 /* Main.storyboard */; };
 		0C8C43E92659FB4A00A48394 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C8C43E82659FB4A00A48394 /* Assets.xcassets */; };
 		0C8C43EC2659FB4A00A48394 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C8C43EA2659FB4A00A48394 /* LaunchScreen.storyboard */; };
@@ -35,10 +44,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C0229CB266627790054E6EE /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		0C0229CD26662AF60054E6EE /* AccountListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListTableViewCell.swift; sourceTree = "<group>"; };
+		0C0229D1266760BB0054E6EE /* AccountListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListViewController.swift; sourceTree = "<group>"; };
+		0C0229D7266772EA0054E6EE /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		0C0229D926677B730054E6EE /* MoneyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyViewController.swift; sourceTree = "<group>"; };
+		0C49B2A22666071300F40680 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		0C67C56E266C4D6800A7A146 /* MoneyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyTableViewCell.swift; sourceTree = "<group>"; };
 		0C8C43DC2659FB4500A48394 /* Sensei.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sensei.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C8C43DF2659FB4500A48394 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C8C43E12659FB4500A48394 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0C8C43E32659FB4500A48394 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0C8C43E62659FB4500A48394 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0C8C43E82659FB4A00A48394 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C8C43EB2659FB4A00A48394 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,6 +71,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C0229CA266625830054E6EE /* RealmSwift in Frameworks */,
+				0C0229C8266625830054E6EE /* Realm in Frameworks */,
+				0C49B29D265F684C00F40680 /* Eureka in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,11 +119,17 @@
 			children = (
 				0C8C43DF2659FB4500A48394 /* AppDelegate.swift */,
 				0C8C43E12659FB4500A48394 /* SceneDelegate.swift */,
-				0C8C43E32659FB4500A48394 /* ViewController.swift */,
 				0C8C43E52659FB4500A48394 /* Main.storyboard */,
 				0C8C43E82659FB4A00A48394 /* Assets.xcassets */,
 				0C8C43EA2659FB4A00A48394 /* LaunchScreen.storyboard */,
 				0C8C43ED2659FB4A00A48394 /* Info.plist */,
+				0C49B2A22666071300F40680 /* AddViewController.swift */,
+				0C0229CB266627790054E6EE /* Account.swift */,
+				0C0229CD26662AF60054E6EE /* AccountListTableViewCell.swift */,
+				0C0229D1266760BB0054E6EE /* AccountListViewController.swift */,
+				0C0229D7266772EA0054E6EE /* EditViewController.swift */,
+				0C0229D926677B730054E6EE /* MoneyViewController.swift */,
+				0C67C56E266C4D6800A7A146 /* MoneyTableViewCell.swift */,
 			);
 			path = Sensei;
 			sourceTree = "<group>";
@@ -144,6 +168,11 @@
 			dependencies = (
 			);
 			name = Sensei;
+			packageProductDependencies = (
+				0C49B29C265F684C00F40680 /* Eureka */,
+				0C0229C7266625830054E6EE /* Realm */,
+				0C0229C9266625830054E6EE /* RealmSwift */,
+			);
 			productName = Sensei;
 			productReference = 0C8C43DC2659FB4500A48394 /* Sensei.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +244,10 @@
 				Base,
 			);
 			mainGroup = 0C8C43D32659FB4500A48394;
+			packageReferences = (
+				0C49B29B265F684C00F40680 /* XCRemoteSwiftPackageReference "Eureka" */,
+				0C0229C6266625820054E6EE /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+			);
 			productRefGroup = 0C8C43DD2659FB4500A48394 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,9 +291,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C8C43E42659FB4500A48394 /* ViewController.swift in Sources */,
+				0C0229CE26662AF60054E6EE /* AccountListTableViewCell.swift in Sources */,
+				0C0229CC266627790054E6EE /* Account.swift in Sources */,
+				0C0229D2266760BB0054E6EE /* AccountListViewController.swift in Sources */,
+				0C0229DA26677B730054E6EE /* MoneyViewController.swift in Sources */,
 				0C8C43E02659FB4500A48394 /* AppDelegate.swift in Sources */,
+				0C49B2A32666071300F40680 /* AddViewController.swift in Sources */,
 				0C8C43E22659FB4500A48394 /* SceneDelegate.swift in Sources */,
+				0C67C56F266C4D6800A7A146 /* MoneyTableViewCell.swift in Sources */,
+				0C0229D8266772EA0054E6EE /* EditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,6 +636,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0C0229C6266625820054E6EE /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.7.6;
+			};
+		};
+		0C49B29B265F684C00F40680 /* XCRemoteSwiftPackageReference "Eureka" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/xmartlabs/Eureka";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.3.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0C0229C7266625830054E6EE /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0C0229C6266625820054E6EE /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		0C0229C9266625830054E6EE /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0C0229C6266625820054E6EE /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+		0C49B29C265F684C00F40680 /* Eureka */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0C49B29B265F684C00F40680 /* XCRemoteSwiftPackageReference "Eureka" */;
+			productName = Eureka;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0C8C43D42659FB4500A48394 /* Project object */;
 }
