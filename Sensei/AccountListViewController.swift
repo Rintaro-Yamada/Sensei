@@ -27,7 +27,6 @@ class AccountListViewController: UIViewController, UITableViewDelegate, UITableV
         
         notificationToken = accounts.observe{[weak self] _ in
             self?.tableView.reloadData()}
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -39,7 +38,6 @@ class AccountListViewController: UIViewController, UITableViewDelegate, UITableV
         cell.nameLabel.text = accounts[indexPath.row].name
         return cell
     }
-    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("\(indexPath.row)番目の行が選択されました。")

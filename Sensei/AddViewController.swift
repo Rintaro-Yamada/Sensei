@@ -14,21 +14,26 @@ class AddViewController: FormViewController {
     var accountstart = Date()
     var accountfinish = Date()
     var accounttool: String = ""
+    let realm = try! Realm()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.tintColor = UIColor.white;
+        
         // ここよくわからん！！！
         let formatter = DateFormatter()
-        let now = ""
-        formatter.dateFormat = "yyyy/MM/dd"
+        formatter.timeStyle = .short
+        formatter.dateStyle = .long
         formatter.locale = Locale(identifier: "ja_JP")
-        let date = formatter.date(from: now)
         
         form +++ Section("生徒情報")
             <<< TextRow(){ row in
                 row.title = "名前"
                 row.placeholder = "山田 太郎"
+            }.cellUpdate(){ cell, row in
+                cell.titleLabel?.textColor = .black
+                
             }.onChange() { row in
                 // 選択された時刻を表示
                 self.accountname = row.value != nil ? row.value! : ""
@@ -36,6 +41,8 @@ class AddViewController: FormViewController {
             <<< PhoneRow(){
                 $0.title = "電話番号"
                 $0.placeholder = "XXX-XXXX-XXXX"
+            }.cellUpdate(){ cell, row in
+                cell.titleLabel?.textColor = .black
             }.onChange() { row in
                 // 選択された時刻を表示
                 
@@ -46,7 +53,7 @@ class AddViewController: FormViewController {
             +++ Section("レッスン日情報")
             <<< DateRow(){
                 $0.title = "レッスン日"
-                $0.value = date
+                $0.dateFormatter?.dateFormat = DateFormatter.dateFormat(fromTemplate: "ydMMM", options: 0, locale: Locale(identifier: "ja_JP"))
             }.onChange() { row in
                 // 選択された時刻を表示
                 print(row.value!)
@@ -54,6 +61,7 @@ class AddViewController: FormViewController {
             }
             <<< TimeRow("開始") {
                 $0.title = "開始"
+                $0.dateFormatter?.dateFormat = DateFormatter.dateFormat(fromTemplate: "HH:mm", options: 0, locale: Locale(identifier: "ja_JP"))
             }.onChange() { row in
                 // 選択された時刻を表示
                 print(row.value!)
@@ -61,6 +69,7 @@ class AddViewController: FormViewController {
             }
             <<< TimeRow("終了") {
                 $0.title = "終了"
+                $0.dateFormatter?.dateFormat = DateFormatter.dateFormat(fromTemplate: "HH:mm", options: 0, locale: Locale(identifier: "ja_JP"))
             }.onChange() { row in
                 // 選択された時刻を表示
                 print(row.value!)
@@ -70,31 +79,24 @@ class AddViewController: FormViewController {
             <<< SegmentedRow<String>() {
                 $0.selectorTitle = "Tool"
                 $0.options = ["LINE","ZOOM","Facetime","Google duo"]
-                $0.value = "LINE"    // initially selected
             }.onChange() { row in
                 // 選択された時刻を表示
                 self.accounttool = row.value!
             }
     }
-    let realm = try! Realm()
+    
     @IBAction func addAccount() {
         let newAccount = Account()
-        newAccount.name = accountname
-        newAccount.phone = accountphone
-        newAccount.date = accountdate
-        newAccount.start = accountstart
-        newAccount.finish = accountfinish
-        newAccount.tool = accounttool
-        if accounttool == "ZOOM"{
-            newAccount.money = "納入済み"
-        }
+        newAccount.name = self.accountname
+        newAccount.phone = self.accountphone
+        newAccount.date = self.accountdate
+        newAccount.start = self.accountstart
+        newAccount.finish = self.accountfinish
+        newAccount.tool = self.accounttool
         
         try! realm.write {
             realm.add(newAccount)
         }
-        dismiss(animated: true, completion: nil)
-    }
-    @IBAction func cancel() {
         dismiss(animated: true, completion: nil)
     }
     
